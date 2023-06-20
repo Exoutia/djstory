@@ -1,10 +1,20 @@
 {% extends 'base/base.html' %} {% block title %}Stories | {% endblock title %}
 {% block content %}
-<h1>Stories</h1>
-{% for i in story %}
-<h2>{{i.title}}</h2>
-<p>
-  {{i.description | truncatechars:80}}
-  <a href="{% url 'story_detail' i.pk %}">Read more</a>
-</p>
-{% endfor %} {% endblock content %}
+<div class="container">
+  <h2>Stories</h2>
+  {% for i in story %}
+  <div class="card" style="width: 18rem">
+    <div class="card-body">
+      <h5 class="card-title">{{ i.title }}</h5>
+      <!-- <h6 class="card-subtitle mb-2 text-muted">{{ i.author }}</h6> -->
+      <p class="card-text">
+        {{ i.description| truncatechars:4 }}
+        <a href="{% url 'story_detail' i.pk %}">
+          read more
+        </a>
+      </p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock content %}

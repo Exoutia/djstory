@@ -3,7 +3,7 @@ from taggit.managers import TaggableManager
 
 
 # Create your models here.
-class Stroy(models.Model):
+class Story(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
@@ -17,7 +17,7 @@ class Stroy(models.Model):
 class Chapter(models.Model):
     title = models.CharField(max_length=100)
     content = models.TextField()
-    story = models.ForeignKey(Stroy, on_delete=models.CASCADE, related_name="chapters")
+    story = models.ForeignKey(Story, on_delete=models.CASCADE, related_name="chapters")
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -33,7 +33,7 @@ class Category(models.Model):
 
 class Comment(models.Model):
     content = models.TextField()
-    story = models.ForeignKey(Stroy, on_delete=models.CASCADE, related_name="comments")
+    story = models.ForeignKey(Story, on_delete=models.CASCADE, related_name="comments")
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

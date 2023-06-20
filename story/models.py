@@ -9,6 +9,7 @@ class Story(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     catergories = models.ManyToManyField("Category", related_name="stories")
     taggit = TaggableManager()
+    # TODO add author field
 
     def __str__(self):
         return self.title

@@ -1,13 +1,10 @@
-{% extends 'base/base.html' %}
-
-{% block title %}Stories | {% endblock title %}
-
-
+{% extends 'base/base.html' %} {% block title %}Stories | {% endblock title %}
 {% block content %}
 <h1>Stories</h1>
 {% for i in story %}
-    <h2>{{i.title}}</h2>
-    <p>{{i.description | truncatechars:80}}</p>
-    <a href="{% url 'story_detail' i.pk %}">Read more</a>
-{% endfor %}
-{% endblock content %}
+<h2>{{i.title}}</h2>
+<p>
+  {{i.description | truncatechars:80}}
+  <a href="{% url 'story_detail' i.pk %}">Read more</a>
+</p>
+{% endfor %} {% endblock content %}

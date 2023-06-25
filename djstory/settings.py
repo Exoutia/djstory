@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "taggit",
     'story',
     "bootstrap5",
+    "accounts",
 ]
 
 MIDDLEWARE = [

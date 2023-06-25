@@ -4,11 +4,11 @@ from taggit.managers import TaggableManager
 
 # Create your models here.
 class Story(models.Model):
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=100, unique=True)
     description = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
-    catergories = models.ManyToManyField("Category", related_name="stories")
-    taggit = TaggableManager()
+    categories = models.ManyToManyField("Category", related_name="stories")
+    tag = TaggableManager()
     # TODO add author field
 
     def __str__(self):

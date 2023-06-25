@@ -1,0 +1,10 @@
+{% extends 'base/base.html' %}
+{% block title %}{{chapter.title}}{% endblock title %}
+
+{% block content %}
+<div class="container">
+  <h1>{{chapter.title}}</h1>
+  <p>{{chapter.content}}</p>
+    <a href="{% url 'story_detail' chapter.story.id %}">Back to list</a>
+</div>
+{% endblock content %}

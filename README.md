@@ -20,4 +20,5 @@ From a long time I like to read books, not the books that my syllabus required b
 - There can be badges earned through the accomplishment like writting the first story.
 - User will have own account page that will show case their photos and etc.
 - A ranking system for the stories that got most likes and most users read it or more like that wiht weeekly and most time basis.
+- Add a latest story section that will conatin the latest chapters that were added.
 - I will add more features with time but this is just plan don't know if i can do this or not.... but i hope i can do this i really want to just give me the motivation, god.

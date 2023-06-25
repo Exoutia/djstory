@@ -1,0 +1,18 @@
+{% extends 'base/base.html' %} {% block title %}Updated Stories | {% endblock title %} {% block content %}
+<div class="container">
+<h1>Updated Stories</h1>
+{% for story in stories %}
+<div class="card" style="width: 18rem">
+  <div class="card-body">
+    <h5 class="card-title">{{ story.title }}</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">
+      {{story.chapters.last.title}}
+    </h6>
+    <a href="{% url 'story_detail' story.id %}" class="card-link">story page</a>
+    <a href="{% url 'chapter_detail' story.chapters.last.id %}" class="card-link">{{story.chapters.last.id}}</a>
+  </div>
+</div>
+{% endfor %}
+</div>
+ {% endblock content %}
+

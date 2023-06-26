@@ -4,13 +4,13 @@ from django.http import HttpResponse
 # Create your views here.
 
 def home(request):
-    return HttpResponse("accounts-home")
+    return render(request, 'accounts/index.html')
 
 def login(request):
     return HttpResponse("login")
 
 def register(request):
-    return HttpResponse("signup")
+    return HttpResponse("register") 
 
 def logout(request):
     return HttpResponse("logout")
